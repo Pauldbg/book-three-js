@@ -2,32 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* création d'une class utilitaire tailwind personnalisé pour le shadow du text */
+@layer utilities {
+  .retro-text-shadow {
+    text-shadow: 3px 3px #ff0000;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+html, body, #__next {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+@keyframes blink {
+  0%, 49% {
+    opacity: 0;
+  }
+  50%, 100% {
+    opacity: 1;
+  }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .animate-blink {
+    animation: blink 1s infinite;
   }
 }

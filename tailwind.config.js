@@ -7,6 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        'pulse': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        pulse: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.05)' },
+        }
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -14,5 +23,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 };
