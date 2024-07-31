@@ -1,12 +1,12 @@
 import React from "react";
-import Scene from "./Scene";
 
 const HomePage = () => {
-    return (
-      <div className="w-screen h-screen bg-white">
-        <Scene />
-      </div>
-    )
-  }
+  return <div className="w-screen h-screen bg-white">
+    
+    Hello
   
-  export default HomePage
+  
+  </div>;
+};
+
+export default HomePage;

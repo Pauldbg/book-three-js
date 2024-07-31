@@ -16,19 +16,19 @@ function RetroMenu() {
   return (
     <nav className="flex flex-col space-y-4 mt-8">
       <button
-        onClick={() => handleMenuClick("/sims")}
+        onClick={() => handleMenuClick("/duckme")}
         className="bg-black border-2 border-green-600 text-green-500 px-4 py-2 font-['Press_Start_2P'] text-base cursor-pointer transition-all duration-300 hover:bg-green-500 hover:text-black w-48 mx-auto"
       >
         Start
       </button>
       <button
-        onClick={() => handleMenuClick("/about")}
+        onClick={() => handleMenuClick("/testpage")}
         className="bg-black border-2 border-green-600 text-green-500 px-4 py-2 font-['Press_Start_2P'] text-base cursor-pointer transition-all duration-300 hover:bg-green-500 hover:text-black w-48 mx-auto"
       >
         About Me
       </button>
       <button
-        onClick={() => handleMenuClick("/contact")}
+        onClick={() => handleMenuClick("/contactpage")}
         className="bg-black border-2 border-green-600 text-green-500 px-4 py-2 font-['Press_Start_2P'] text-base cursor-pointer transition-all duration-300 hover:bg-green-500 hover:text-black w-48 mx-auto"
       >
         Contact
