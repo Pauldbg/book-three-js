@@ -1,6 +1,6 @@
 // import React, { Suspense } from 'react';
 import { Canvas } from "@react-three/fiber";
-import { useRouter } from "next/router"; // Navigation 
+import { useRouter } from "next/router"; // Navigation
 import TexturedCube from "./TexturedCube"; // import composant TexturedCube
 import HUD from "../UI/HUD";
 
@@ -8,9 +8,9 @@ import HUD from "../UI/HUD";
 function RetroMenu() {
   const router = useRouter();
 
-    // Fonction pour gérer les clics sur les boutons du menu
+  // Fonction pour gérer les clics sur les boutons du menu
   const handleMenuClick = (route) => {
-    router.push(route);  // Navigue vers la route spécifiée
+    router.push(route); // Navigue vers la route spécifiée
   };
 
   return (
@@ -39,22 +39,33 @@ function RetroMenu() {
 
 // Composant principal de la page d'accueil rétro
 export default function RetroHomePage() {
+  const currentDate = new Date().toLocaleString("fr-FR", {
+    month: "long",
+    year: "numeric",
+  });
+
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-black text-green-500 font-['Press_Start_2P']">
       {/* Canvas pour le rendu 3D */}
       <Canvas className="absolute inset-0">
         <ambientLight /> {/* Lumière ambiante pour l'éclairage global */}
-        <pointLight position={[10, 10, 10]} /> {/* Source de lumière ponctuelle */}
+        <pointLight position={[10, 10, 10]} />{" "}
+        {/* Source de lumière ponctuelle */}
         <TexturedCube /> {/* Rendu du cube texturé */}
       </Canvas>
       {/* Contenu 2D superposé */}
       <div className="absolute inset-0 flex flex-col justify-center items-center">
         {/* Titre de la page */}
-        <h1 className="text-4xl pt-10 retro-text-shadow">Book pro de Paul DBG</h1>
+        <h1 className="text-4xl pt-10 retro-text-shadow">
+          Book pro de Paul DBG
+        </h1>
         {/* Espace réservé, potentiellement pour le cube 3D */}
         <div className="relative w-64 h-64"></div>
         {/* Rendu du menu rétro */}
         <RetroMenu />
+        <div className="mt-8 text-xs text-gray-600">
+          © {currentDate} Paul's Book 
+        </div>
       </div>
     </div>
   );

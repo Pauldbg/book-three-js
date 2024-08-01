@@ -1,8 +1,12 @@
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic' // Charge le composant à la demande
 
-export default function MyBookPage() {
-  return (
-    <div style={{ width: '100vw', height: '100vh' }}>
-    </div>
-  )
-}
+const BookPage = dynamic(() => import('../components/Book/HomePage'), { ssr: false }) 
+
+export default function Page() {
+
+    return (
+      <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
+        <BookPage />
+      </div>
+    )
+  }
