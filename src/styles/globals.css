@@ -1,11 +1,15 @@
-@tailwind base;
+ /* Importation de la police Press Start 2P */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Importation des fichiers Tailwind CSS */
+@tailwind base; 
 @tailwind components;
 @tailwind utilities;
 
 /* création d'une class utilitaire tailwind personnalisé pour le shadow du text */
-@layer utilities {
-  .retro-text-shadow {
-    text-shadow: 3px 3px #ff0000;
+@layer utilities { 
+  .retro-text-shadow { 
+    text-shadow: 3px 3px #ff0000; 
   }
 }
 
@@ -32,3 +36,4 @@ html, body, #__next {
     animation: blink 1s infinite;
   }
 }
+

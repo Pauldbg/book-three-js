@@ -2,7 +2,7 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic' // Charge le composant à la demande
 
-const RetroHomePage = dynamic(() => import('../components/Home/RetroHome'), { ssr: false })
+const RetroHome = dynamic(() => import('../components/Home/RetroHome'), { ssr: false })
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
       </Head>
-      <RetroHomePage />
+      <RetroHome />
     </>
   )
 }

@@ -1,13 +1,14 @@
 import dynamic from 'next/dynamic' // Charge le composant à la demande
-import HUD from '../components/UI/HUD'
+import FindMeHUD from '../components/UI/FindMeSlice/FindMeHUD.jsx';
 
 
-const FindMeGame = dynamic(() => import('../components/FindMe/FindMeGame'), { ssr: false }) 
+const GameScene = dynamic(() => import('../components/FindMe/FindMeGame'), { ssr: false }) 
 
 export default function FindMePage() {
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
-      <FindMeGame />
+      <GameScene />
+      <FindMeHUD/>
     </div>
   )
 }

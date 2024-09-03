@@ -6,7 +6,7 @@ import { GAME_CONFIG } from '../../ConfigDuckMe'
 import { 
   updatePlayerPosition,
   setGameOver
-} from "../../redux/reducers/gameReducer";
+} from "../../redux/reducers/stuckMe";
 
 function Player() {
   // Référence pour le groupe contenant le mesh et les bordures

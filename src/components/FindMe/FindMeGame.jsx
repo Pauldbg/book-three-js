@@ -8,7 +8,6 @@ import Skybox from './Skybox';
 import Maze from './Maze'
 import Floor from './Floor';
 import { selectMaze, selectObjectPosition, selectIsGameOver, resetGame } from '../../redux/reducers/findMeSlice'
-import FindMeHUD from '../UI/FindMeHUD';
 
 
 export default function FindMeGame() {
@@ -16,9 +15,9 @@ export default function FindMeGame() {
   const dispatch = useDispatch();
   
   // Sélectionne différentes parties de l'état Redux
-  const maze = useSelector(selectMaze);  // Structure du labyrinthe
-  const objectPosition = useSelector(selectObjectPosition);  // Position de l'objet à collecter
-  const isGameOver = useSelector(selectIsGameOver);  // État de fin de jeu
+  const maze = useSelector(selectMaze);  // Structure du labyrinthe 
+  const objectPosition = useSelector(selectObjectPosition);  // Position de l'objet à collecter 
+  const isGameOver = useSelector(selectIsGameOver);  // État de fin de jeu 
 
   // Effet qui s'exécute une fois au montage du composant
   useEffect(() => {
@@ -33,8 +32,8 @@ export default function FindMeGame() {
         {/* Éclairage de la scène */}
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
-        <Skybox/>
-        <Physics>
+        <Skybox/> 
+        <Physics> 
         {/* Composant joueur */}
         <Player />
         {/* Composant labyrinthe */}
@@ -42,9 +41,8 @@ export default function FindMeGame() {
         <Floor />
         </Physics>
         {/* Contrôles de la caméra à la première personne */}
-        <PointerLockControls />
+        <PointerLockControls />  // Permet de contrôler la caméra avec la souris
       </Canvas>
-      <FindMeHUD />
     </>
   )
 }

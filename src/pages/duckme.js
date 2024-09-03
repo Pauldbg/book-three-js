@@ -1,6 +1,6 @@
 
  import dynamic from 'next/dynamic'
- import HUD from '../components/UI/HUD'
+ import HUD from '../components/UI/DuckMeUI/HUD'
  import GameOverMessage from '../components/UI/GameOverMessage'
  import { useSelector } from 'react-redux'
 

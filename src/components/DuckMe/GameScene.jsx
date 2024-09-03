@@ -13,7 +13,7 @@ import {
   updateObstacles,
   setGameOver,
   incrementGameTime,
-} from "../../redux/reducers/gameReducer";
+} from "../../redux/reducers/stuckMe";
 
 // Composant pour gérer la logique du jeu
 function GameLogic() {
